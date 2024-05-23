@@ -8,16 +8,12 @@ const createOrder = async (req: Request, res: Response) => {
     const { order: orderId } = req.body;
     const result = await OrderService.createOrderInDB(orderId);
     res.status(200).json({
-      succses: true,
-      message: "Data Successfully Added",
+      success: true,
+      message: "Order created successfully!",
       data: result,
     });
   } catch (err) {
-    res.status(500).json({
-      success: false,
-      message: "something went wrong",
-      error: err,
-    });
+    console.log(err);
   }
 };
 
@@ -26,7 +22,7 @@ const getOrders = async (req: Request, res: Response) => {
     const result = await OrderService.getProductFromDB();
     res.status(200).json({
       succses: true,
-      message: "Data Successfully Added",
+      message: "Orders fetched successfully!",
       data: result,
     });
   } catch (err) {
@@ -44,7 +40,7 @@ const getOrderByEmail = async (req: Request, res: Response) => {
     const result = await OrderService.getOrderByEmailFromDB(email);
     res.status(200).json({
       succses: true,
-      message: "Data Successfully Retrived",
+      message: "Orders fetched successfully for user email!",
       data: result,
     });
   } catch (err) {
