@@ -1,4 +1,3 @@
-import { Request, Response } from "express";
 import { Order } from "./order-interface";
 import { OrderModel } from "./order-schema";
 
