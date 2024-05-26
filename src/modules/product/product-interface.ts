@@ -13,7 +13,7 @@ export type Product = {
   description: string;
   price: number;
   category: string;
-  tags: ["audio", "portable", "wireless", "speaker"];
-  variants: [Variant];
+  tags: string[];
+  variants: Variant[];
   inventory: Inventory;
 };

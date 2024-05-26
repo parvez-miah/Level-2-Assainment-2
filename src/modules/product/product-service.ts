@@ -1,8 +1,8 @@
 import { Product } from "./product-interface";
 import { ProductModel } from "./product-schema";
 
-const CreateProductInDB = async (Product: Product) => {
-  const result = ProductModel.create(Product);
+const CreateProductInDB = async (product: Product) => {
+  const result = ProductModel.create(product);
   return result;
 };
 
